@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queen - Músicas</title>
+
+<!-- Fontes Google -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Rock+Salt&family=Anton&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== GERAL ===== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/liveaid2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #eee;
+    line-height: 1.8;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+  /* ===== MENU ===== */
+  nav {
+    background: linear-gradient(90deg, #000, #ff6600);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .logo-queen {
+    position: absolute;
+    left: 20px;
+    height: 50px;
+    width: auto;
+  }
+
+  .menu-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu-links a {
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .menu-links a:hover {
+    color: white;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    text-align: center;
+    padding: 70px 20px 40px 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    color: #ff6600;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+  }
+
+  .hero p {
+    font-family: 'Rock Salt', cursive;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: #ffb347;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  /* ===== CARDS ===== */
+  .musicas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-items: center;
+    padding: 0 20px 60px 20px;
+  }
+
+  .musica-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+  }
+
+  .musica-card:hover {
+    transform: scale(1.05);
+  }
+
+  .musica-card img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .musica-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #ff6600;
+    margin: 8px 0;
+  }
+
+  /* ===== BOTÕES ===== */
+  .musica-card a {
+    display: inline-block;
+    background: #ff6600;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .musica-card a:hover {
+    background: #ffb347;
+    color: #000;
+    transform: scale(1.1);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: linear-gradient(90deg, #000, #ff6600);
+    color: #ffb347;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 768px) {
+    .logo-queen {
+      height: 40px;
+    }
+    nav {
+      padding: 10px 15px;
+    }
+    .menu-links {
+      gap: 10px;
+    }
+    .musica-card {
+      width: 45%;
+    }
+    .musica-card img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-queen {
+      height: 35px;
+    }
+    .menu-links {
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .musicas-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .musica-card {
+      width: 90%;
+    }
+    .musica-card img {
+      height: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== MENU ===== -->
+  <nav>
+    <img src="/img/logo2.png" alt="Queen Logo" class="logo-queen">
+    <div class="menu-links">
+      <a href="/index.html">Início</a>
+      <a href="/biografia/index.html">Biografia</a>
+      <a href="/musicas/index.html">Músicas</a>
+      <a href="/Albuns/index.html">Álbuns</a>
+      <a href="/redessociais/index.html">Redes Sociais</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <h1>QUEEN</h1>
+    <p>As Músicas Mais Famosas</p>
+  </header>
+
+  <!-- ===== CARDS DAS MÚSICAS ===== -->
+  <section class="musicas-container">
+    <div class="musica-card">
+      <img src="/img/queen1.jpg" alt="Bohemian Rhapsody">
+      <h3>Bohemian Rhapsody</h3>
+      <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank">OUVIR</a>
+    </div>
+
+    <div class="musica-card">
+      <img src="/img/R.jpg" alt="We Will Rock You">
+      <h3>We Will Rock You</h3>
+      <a href="https://www.youtube.com/watch?v=-tJYN-eG1zk" target="_blank">OUVIR</a>
+    </div>
+
+    <div class="musica-card">
+      <img src="/img/gt.jpg" alt="Another One Bites the Dust">
+      <h3>Another One Bites the Dust</h3>
+      <a href="https://www.youtube.com/watch?v=rY0WxgSXdEE" target="_blank">OUVIR</a>
+    </div>
+
+    <div class="musica-card">
+      <img src="/img/tht.jpg" alt="Don't Stop Me Now">
+      <h3>Don't Stop Me Now</h3>
+      <a href="https://www.youtube.com/watch?v=HgzGwKwLmgM" target="_blank">OUVIR</a>
+    </div>
+
+    <div class="musica-card">
+      <img src="/img/rvg.jpg" alt="Killer Queen">
+      <h3>Killer Queen</h3>
+      <a href="https://www.youtube.com/watch?v=2ZBtPf7FOoM" target="_blank">OUVIR</a>
+    </div>
+
+    <div class="musica-card">
+      <img src="/img/hj.jpg" alt="We Are The Champions">
+      <h3>We Are The Champions</h3>
+      <a href="https://www.youtube.com/watch?v=04854XqcfCY" target="_blank">OUVIR</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 - Tributo a Queen | Criado por Gonçalo Silva</p>
+  </footer>
+
+</body>
+</html>
+
+
+

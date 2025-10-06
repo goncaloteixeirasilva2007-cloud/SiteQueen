@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Queen - The Champions of Rock</title>
+<title>Queen - Biografia dos Membros</title>
 
 <!-- Fontes Google -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Rock+Salt&family=Anton&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/img/queen1.jpg'); 
+    background-image: url('/img/liveaid1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -26,11 +26,9 @@
   body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
     z-index: -1;
   }
 
@@ -68,6 +66,7 @@
     color: #ffb347;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1rem;
     transition: color 0.3s;
   }
 
@@ -77,37 +76,71 @@
   .hero {
     color: white;
     text-align: center;
-    padding: 120px 20px 40px 20px;
+    padding: 40px 20px 20px 20px;
   }
 
   .hero h1 {
-    font-family: 'Anton', sans-serif; 
-    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
     color: #ff6600;
     text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
   }
 
   .hero p {
-    font-family: 'Rock Salt', cursive; 
-    font-size: clamp(1.2rem, 5vw, 2em);
+    font-family: 'Rock Salt', cursive;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     color: #ffb347;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
     margin-top: 0;
+    margin-bottom: 40px;
   }
 
-  /* ===== INTRODUÇÃO ===== */
-  .introducao {
-    max-width: 900px;
-    margin: 30px auto 60px auto;
-    padding: 20px 25px;
-    background: rgba(0,0,0,0.6);
+  /* ===== BIOGRAFIA ===== */
+  .biografia-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px 40px 20px;
+  }
+
+  .bio-card {
+    background: rgba(0,0,0,0.7);
     border-radius: 15px;
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ffb347;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+  }
+
+  .bio-card:hover { transform: scale(1.05); }
+
+  .bio-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .bio-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #ff6600;
+    margin: 10px 0 5px 0;
+    letter-spacing: 1px;
+  }
+
+  .bio-card p {
+    font-size: 0.9rem;
+    color: #ffb347;
+    text-align: justify;
+    word-spacing: 0.1em;
+    letter-spacing: normal;
+    line-height: 1.4;
+    margin: 0;
   }
 
   /* ===== FOOTER ===== */
@@ -121,25 +154,29 @@
 
   /* ===== RESPONSIVO ===== */
   @media (max-width: 768px) {
-    .logo-queen { height: 40px; left: 10px; }
+    .logo-queen { height: 40px; }
     nav { padding: 10px 15px; }
     .menu-links { gap: 10px; }
-    .introducao { padding: 15px 20px; font-size: 1rem; }
+    .bio-card { width: 45%; }
+    .bio-card img { width: 100%; height: 200px; }
   }
 
   @media (max-width: 480px) {
-    .logo-queen { height: 35px; left: 8px; }
+    .logo-queen { height: 35px; }
     .menu-links { gap: 8px; font-size: 0.9rem; }
-    .hero { padding: 100px 15px 20px 15px; }
-    .introducao { margin: 20px 10px 40px 10px; font-size: 0.95rem; }
+    .hero { padding: 20px 15px 10px 15px; }
+    .biografia-container { grid-template-columns: 1fr; gap: 20px; }
+    .bio-card { width: 90%; }
+    .bio-card img { height: 180px; }
   }
+
 </style>
 </head>
 <body>
 
-  <!-- ===== MENU COM LOGO ===== -->
+  <!-- MENU -->
   <nav>
-    <img src="img/logo2.png" alt="Queen Logo" class="logo-queen">
+    <img src="/img/logo2.png" alt="Queen Logo" class="logo-queen">
     <div class="menu-links">
       <a href="/index.html">Início</a>
       <a href="/biografia/index.html">Biografia</a>
@@ -149,22 +186,44 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <header class="hero">
     <h1>QUEEN</h1>
-    <p>The Champions of Rock</p>
+    <p>Biografia dos Membros</p>
   </header>
 
-  <!-- ===== INTRODUÇÃO ===== -->
-  <section class="introducao">
-    Fundada em 1970, a banda britânica Queen tornou-se um dos maiores ícones do rock mundial, combinando talento individual e inovação musical. Liderada pelo carismático Freddie Mercury, com Brian May na guitarra, Roger Taylor na bateria e John Deacon no baixo, a banda criou sucessos atemporais como "Bohemian Rhapsody", "We Will Rock You" e "Another One Bites the Dust". Conhecida pelas suas performances e pela energia contagiante, Queen inspirou gerações de fãs. A sua mistura de rock, pop e ópera transformou a música para sempre, consolidando-se como uma lenda viva do cenário musical internacional.
+  <!-- BIOGRAFIAS -->
+  <section class="biografia-container">
+    <div class="bio-card">
+      <img src="/img/freddy.jpg" alt="Freddie Mercury">
+      <h3>Freddie Mercury</h3>
+      <p>Vocalista e pianista icónico do Queen.</p>
+    </div>
+
+    <div class="bio-card">
+      <img src="/img/bryan.jpg" alt="Brian May">
+      <h3>Brian May</h3>
+      <p>Guitarrista principal e compositor da banda.</p>
+    </div>
+
+    <div class="bio-card">
+      <img src="/img/roger.jpg" alt="Roger Taylor">
+      <h3>Roger Taylor</h3>
+      <p>Baterista e vocal de apoio, com estilo energético.</p>
+    </div>
+
+    <div class="bio-card">
+      <img src="/img/john.jpg" alt="John Deacon">
+      <h3>John Deacon</h3>
+      <p>Baixista do Queen.</p>
+    </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2025 - Tributo a Queen | Criado por Gonçalo Silva</p>
   </footer>
 
 </body>
 </html>
+
 

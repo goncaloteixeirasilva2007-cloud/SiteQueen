@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queen - Álbuns Mais Conhecidos</title>
+
+  <!-- Fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Rock+Salt&family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== BODY ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('/img/queen2.jpg'); /* Fundo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #eee;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    /* ===== MENU ===== */
+    nav {
+      background: linear-gradient(90deg, #000, #ff6600);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .logo-queen {
+      position: absolute;
+      left: 20px;
+      height: 50px;
+      width: auto;
+    }
+
+    .menu-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-links a {
+      color: #ffb347;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .menu-links a:hover { color: white; }
+
+    /* ===== HERO ===== */
+    .hero {
+      color: white;
+      text-align: center;
+      padding: 100px 20px 40px 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      color: #ff6600;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+      margin-bottom: 10px;
+      letter-spacing: 4px;
+    }
+
+    .hero p {
+      font-family: 'Rock Salt', cursive;
+      font-size: clamp(1.2rem, 5vw, 2rem);
+      color: #ffb347;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      margin-top: 0;
+    }
+
+    /* ===== ÁLBUNS ===== */
+    .albums-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px 60px 20px;
+    }
+
+    .album-card {
+      background: rgba(0,0,0,0.7);
+      border-radius: 15px;
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .album-card:hover { transform: scale(1.05); }
+
+    .album-card img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .album-card h3 {
+      font-family: 'Anton', sans-serif;
+      color: #ff6600;
+      margin: 10px 0 5px 0;
+    }
+
+    .album-card p {
+      font-size: 0.95rem;
+      color: #ffb347;
+      margin-bottom: 10px;
+    }
+
+    .album-card a {
+      display: inline-block;
+      background: #ff6600;
+      color: #000;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .album-card a:hover {
+      background: #ffb347;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #000, #ff6600);
+      color: #ffb347;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 768px) {
+      .logo-queen { height: 40px; }
+      .album-card { width: 45%; }
+      .album-card img { width: 100%; height: 200px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo-queen { height: 35px; }
+      .album-card { width: 90%; }
+      .album-card img { height: 180px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== MENU ===== -->
+  <nav>
+    <img src="/img/logo2.png" alt="Queen Logo" class="logo-queen">
+    <div class="menu-links">
+      <a href="/index.html">Início</a>
+      <a href="/biografia/index.html">Biografia</a>
+      <a href="/musicas/index.html">Músicas</a>
+      <a href="/Albuns/index.html">Álbuns</a>
+      <a href="/redessociais/index.html">Redes Sociais</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <h1>QUEEN</h1>
+    <p>Álbuns Mais Conhecidos</p>
+  </header>
+
+  <!-- ===== ÁLBUNS ===== -->
+  <section class="albums-container">
+
+    <div class="album-card">
+      <img src="/img/a night opera.jpg" alt="A Night at the Opera">
+      <h3>A Night at the Opera</h3>
+      <p>1975</p>
+      <a href="https://open.spotify.com/intl-pt/album/1GbtB4zTqAsyfZEsm1RZfx" target="_blank">Ouvir</a>
+    </div>
+
+    <div class="album-card">
+      <img src="/img/news of the world.jpg" alt="News of the World">
+      <h3>News of the World</h3>
+      <p>1977</p>
+      <a href="https://open.spotify.com/intl-pt/album/7tB40pGzj6Tg0HePj2jWZt" target="_blank">Ouvir</a>
+    </div>
+
+    <div class="album-card">
+      <img src="/img/the game.jpg" alt="The Game">
+      <h3>The Game</h3>
+      <p>1980</p>
+      <a href="https://open.spotify.com/intl-pt/album/58alCatewkjNm9IM1Ucj67" target="_blank">Ouvir</a>
+    </div>
+
+    <div class="album-card">
+      <img src="/img/jazz.jpg" alt="Jazz">
+      <h3>Jazz</h3>
+      <p>1978</p>
+      <a href="https://open.spotify.com/intl-pt/album/2yuTRGIackbcReLUXOYBqU" target="_blank">Ouvir</a>
+    </div>
+
+    <div class="album-card">
+      <img src="/img/thework.jpg" alt="The Works">
+      <h3>The Works</h3>
+      <p>1984</p>
+      <a href="https://open.spotify.com/intl-pt/album/61foK8xa76FEOk36uOxoc9" target="_blank">Ouvir</a>
+    </div>
+
+    <div class="album-card">
+      <img src="/img/innuendo.jpg" alt="Innuendo">
+      <h3>Innuendo</h3>
+      <p>1991</p>
+      <a href="https://open.spotify.com/intl-pt/album/5kffKW0sSLo6tkLg1veUGC" target="_blank">Ouvir</a>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 - Tributo a Queen | Criado por Gonçalo Silva</p>
+  </footer>
+
+</body>
+</html>
