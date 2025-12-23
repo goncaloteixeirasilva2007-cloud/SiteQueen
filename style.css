@@ -1,122 +1,498 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 70px 0 0 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #eee;
+  line-height: 1.8;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('img/queen1.jpg'); 
-    background-position: center;
-    background-attachment: fixed;
-    color: #eee;
-    line-height: 1.8;
-    position: relative;
-  }
+/* Navigation */
+nav {
+  background: linear-gradient(90deg, #000, #ff6600);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  min-height: 60px;
+  box-sizing: border-box;
+}
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; 
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: -1;
-  }
+.logo-queen {
+  height: 45px;
+  width: auto;
+  flex-shrink: 0;
+}
 
-  nav {
-    background: linear-gradient(90deg, #000, #ff6600);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
+.menu-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
 
-  .logo-queen {
-    position: absolute;
-    left: 20px;
-    height: 50px;
-    width: auto;
-  }
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+  white-space: nowrap;
+  min-width: fit-content;
+  padding: 5px 0;
+}
 
+.menu-links a:hover { 
+  color: #ffb347; 
+}
+
+.menu-links a.active { 
+  color: #ffb347; 
+  font-weight: bold; 
+}
+
+/* Hero Section */
+.hero {
+  color: white;
+  text-align: center;
+  padding: 120px 20px 40px 20px;
+}
+
+.hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  color: #ff6600;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-family: 'Rock Salt', cursive;
+  font-size: clamp(1.2rem, 5vw, 2em);
+  color: #ffb347;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  margin-top: 0;
+}
+
+/* Introduction Section */
+.introducao {
+  max-width: 900px;
+  margin: 30px auto 60px auto;
+  padding: 20px 25px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffb347;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Biografia Container */
+.biografia-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px 40px 20px;
+}
+
+.bio-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.bio-card:hover { transform: scale(1.05); }
+
+.bio-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.bio-card h3 {
+  font-family: 'Anton', sans-serif;
+  color: #ff6600;
+  margin: 10px 0 5px 0;
+  letter-spacing: 1px;
+}
+
+.bio-card p {
+  font-size: 0.9rem;
+  color: #ffb347;
+  text-align: justify;
+  word-spacing: 0.1em;
+  letter-spacing: normal;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Albums Container */
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px 60px 20px;
+}
+
+.album-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.album-card:hover { transform: scale(1.05); }
+
+.album-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.album-card h3 {
+  font-family: 'Anton', sans-serif;
+  color: #ff6600;
+  margin: 10px 0 5px 0;
+}
+
+.album-card p {
+  font-size: 0.95rem;
+  color: #ffb347;
+  margin-bottom: 10px;
+}
+
+.album-card a {
+  display: inline-block;
+  background: #ff6600;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.album-card a:hover {
+  background: #ffb347;
+}
+
+/* Musicas Container */
+.musicas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 0 20px 60px 20px;
+}
+
+.musica-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.musica-card:hover {
+  transform: scale(1.05);
+}
+
+.musica-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.musica-card h3 {
+  font-family: 'Anton', sans-serif;
+  color: #ff6600;
+  margin: 8px 0;
+}
+
+.musica-card a {
+  display: inline-block;
+  background: #ff6600;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.musica-card a:hover {
+  background: #ffb347;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Social Container */
+.social-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.social-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 102, 0, 0.8);
+}
+
+.social-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.social-card:hover img {
+  transform: scale(1.15);
+}
+
+.social-card a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #000, #ff6600);
+  color: #ffb347;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
   .menu-links {
-    display: flex;
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
   }
-
+  
   .menu-links a {
-    color: #ffb347;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    padding: 5px 0;
   }
+  
+  .albums-container { gap: 20px; }
+  .musicas-container { gap: 20px; }
+  .social-container { gap: 30px; }
+}
 
-  .menu-links a:hover { color: white; }
-
-
-  .hero {
-    color: white;
-    text-align: center;
-    padding: 120px 20px 40px 20px;
+@media (max-width: 992px) {
+  nav {
+    padding: 12px 20px;
   }
-
-  .hero h1 {
-    font-family: 'Anton', sans-serif; 
-    font-size: clamp(2.5rem, 8vw, 5rem); 
-    color: #ff6600;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
-    margin-bottom: 20px;
+  
+  .logo-queen {
+    height: 40px;
   }
-
-  .hero p {
-    font-family: 'Rock Salt', cursive; 
-    font-size: clamp(1.2rem, 5vw, 2em);
-    color: #ffb347;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-    margin-top: 0;
+  
+  .menu-links {
+    gap: 15px;
   }
-
- 
-  .introducao {
-    max-width: 900px;
-    margin: 30px auto 60px auto;
-    padding: 20px 25px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 15px;
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ffb347;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  
+  .menu-links a {
+    font-size: 0.9rem;
+    padding: 5px 0;
   }
+}
 
-
-  footer {
-    background: linear-gradient(90deg, #000, #ff6600);
-    color: #ffb347;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+@media (max-width: 768px) {
+  body { padding-top: 60px; }
+  
+  nav { 
+    padding: 12px 15px;
   }
-
- 
-  @media (max-width: 768px) {
-    .logo-queen { height: 40px; left: 10px; }
-    nav { padding: 10px 15px; }
-    .menu-links { gap: 10px; }
-    .introducao { padding: 15px 20px; font-size: 1rem; }
+  
+  .logo-queen { 
+    height: 38px; 
   }
-
-  @media (max-width: 480px) {
-    .logo-queen { height: 35px; left: 8px; }
-    .menu-links { gap: 8px; font-size: 0.9rem; }
-    .hero { padding: 100px 15px 20px 15px; }
-    .introducao { margin: 20px 10px 40px 10px; font-size: 0.95rem; }
+  
+  .menu-links { 
+    gap: 12px; 
   }
+  
+  .menu-links a {
+    font-size: 0.85rem;
+    padding: 5px 0;
+  }
+  
+  .hero { padding: 100px 15px 30px 15px; }
+  .introducao { padding: 15px 20px; font-size: 1rem; }
+  .biografia-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+  .bio-card { max-width: 200px; }
+  .albums-container { gap: 20px; }
+  .album-card { max-width: 200px; }
+  .musicas-container { grid-template-columns: repeat(auto-fit, minmin(200px, 1fr)); gap: 15px; }
+  .musica-card { max-width: 200px; }
+  .social-container { gap: 20px; }
+  .social-card { width: 140px; height: 140px; }
+  .social-card img { width: 60px; height: 60px; }
+}
 
+@media (max-width: 640px) {
+  nav {
+    padding: 10px 12px;
+  }
+  
+  .logo-queen {
+    height: 35px;
+  }
+  
+  .menu-links {
+    gap: 10px;
+  }
+  
+  .menu-links a {
+    font-size: 0.8rem;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav { 
+    padding: 10px;
+    min-height: 50px;
+  }
+  
+  .logo-queen { 
+    height: 32px;
+  }
+  
+  .menu-links { 
+    gap: 8px;
+  }
+  
+  .menu-links a {
+    font-size: 0.75rem;
+    padding: 5px 0;
+  }
+  
+  .hero { padding: 80px 10px 20px 10px; }
+  .hero h1 { font-size: clamp(2rem, 10vw, 4rem); }
+  .hero p { font-size: clamp(1rem, 6vw, 1.5rem); }
+  .introducao { margin: 20px 10px 40px 10px; padding: 15px; font-size: 0.95rem; }
+  .biografia-container { grid-template-columns: 1fr; gap: 15px; padding: 0 10px 30px 10px; }
+  .bio-card { max-width: 100%; }
+  .albums-container { gap: 15px; padding: 30px 10px 40px 10px; }
+  .album-card { max-width: 100%; }
+  .musicas-container { grid-template-columns: 1fr; gap: 15px; padding: 0 10px 40px 10px; }
+  .musica-card { max-width: 100%; }
+  .social-container { gap: 15px; padding-bottom: 40px; }
+  .social-card { width: 120px; height: 120px; }
+  .social-card img { width: 50px; height: 50px; }
+  footer { padding: 15px; }
+}
+
+@media (max-width: 380px) {
+  nav {
+    padding: 8px;
+  }
+  
+  .logo-queen {
+    height: 30px;
+  }
+  
+  .menu-links {
+    gap: 6px;
+  }
+  
+  .menu-links a {
+    font-size: 0.7rem;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  nav {
+    padding: 8px 6px;
+  }
+  
+  .logo-queen {
+    height: 28px;
+  }
+  
+  .menu-links { 
+    gap: 5px;
+  }
+  
+  .menu-links a {
+    font-size: 0.65rem;
+    padding: 5px 0;
+  }
+  
+  .social-container { gap: 10px; }
+  .social-card { width: 100px; height: 100px; }
+  .social-card img { width: 40px; height: 40px; }
+}

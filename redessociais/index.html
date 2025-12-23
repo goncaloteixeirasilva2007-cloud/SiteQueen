@@ -4,165 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Queen - Redes Sociais</title>
-
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Rock+Salt&family=Anton&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="../style.css">
 <style>
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/queen4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #eee;
-    line-height: 1.8;
-    position: relative;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-  }
-
-
-  nav {
-    background: linear-gradient(90deg, #000, #ff6600);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
-
-  .logo-queen {
-    position: absolute;
-    left: 20px;
-    height: 50px;
-    width: auto;
-  }
-
-  .menu-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .menu-links a {
-    color: #ffb347;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-
-  .menu-links a:hover { color: white; }
-
-  
-  .hero {
-    text-align: center;
-    padding: 70px 20px 40px 20px;
-  }
-
-  .hero h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(3.5rem, 8vw, 5.5rem);
-    color: #ff6600;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-    margin-bottom: 10px;
-    letter-spacing: 4px;
-  }
-
-  .hero p {
-    font-family: 'Rock Salt', cursive;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
-    color: #ffb347;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-
-  
-  .social-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding-bottom: 60px;
-  }
-
-  .social-card {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    width: 160px;
-    height: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: transform 0.3s, background 0.3s;
-  }
-
-  .social-card:hover {
-    transform: scale(1.1);
-    background: rgba(255, 102, 0, 0.8);
-  }
-
-  .social-card img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
-  }
-
-  .social-card:hover img {
-    transform: scale(1.15);
-  }
-
-  .social-card a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
- 
-  footer {
-    background: linear-gradient(90deg, #000, #ff6600);
-    color: #ffb347;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-
-  @media (max-width: 480px) {
-    .social-container {
-      gap: 25px;
-    }
-    .social-card {
-      width: 130px;
-      height: 130px;
-    }
-    .social-card img {
-      width: 55px;
-      height: 55px;
-    }
-  }
+body {
+  background-image: url('../img/queen4.jpg');
+}
 </style>
 </head>
 <body>
@@ -175,7 +22,7 @@
       <a href="../biografia/index.html">Biografia</a>
       <a href="../musicas/index.html">Músicas</a>
       <a href="../Albuns/index.html">Álbuns</a>
-      <a href="index.html">Redes Sociais</a>
+      <a href="index.html" class="active">Redes Sociais</a>
     </div>
   </nav>
 
