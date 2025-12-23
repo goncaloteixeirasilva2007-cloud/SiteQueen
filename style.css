@@ -28,12 +28,12 @@ body::before {
 nav {
   background: linear-gradient(90deg, #000, #ff6600);
   padding: 15px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 9999;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -369,10 +369,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body { padding-top: 60px; }
+  body { padding-top: 60px !important; }
   
   nav { 
     padding: 12px 15px;
+    position: fixed !important;
+    top: 0 !important;
   }
   
   .logo-queen { 
@@ -394,7 +396,7 @@ footer {
   .bio-card { max-width: 200px; }
   .albums-container { gap: 20px; }
   .album-card { max-width: 200px; }
-  .musicas-container { grid-template-columns: repeat(auto-fit, minmin(200px, 1fr)); gap: 15px; }
+  .musicas-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
   .musica-card { max-width: 200px; }
   .social-container { gap: 20px; }
   .social-card { width: 140px; height: 140px; }
@@ -424,6 +426,8 @@ footer {
   nav { 
     padding: 10px;
     min-height: 50px;
+    position: fixed !important;
+    top: 0 !important;
   }
   
   .logo-queen { 

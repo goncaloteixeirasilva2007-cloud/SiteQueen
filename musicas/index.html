@@ -10,6 +10,89 @@
 body {
   background-image: url('../img/liveaid2.jpg');
 }
+
+/* Garantir navbar fixa em mobile com transição suave */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  transition: all 0.3s ease-in-out;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Container interno para centralizar conteúdo */
+nav > * {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de encolher ao fazer scroll */
+nav.scrolled {
+  padding: 8px 30px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+nav.scrolled .logo-queen {
+  height: 35px !important;
+}
+
+.logo-queen {
+  transition: height 0.3s ease-in-out;
+}
+
+.menu-links {
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    justify-content: space-between !important;
+  }
+  
+  body {
+    padding-top: 60px !important;
+  }
+  
+  nav.scrolled {
+    padding: 8px 15px !important;
+  }
+  
+  nav.scrolled .logo-queen {
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    min-height: 50px;
+    justify-content: space-between !important;
+  }
+  
+  body {
+    padding-top: 50px !important;
+  }
+  
+  nav.scrolled {
+    padding: 6px 10px !important;
+    min-height: 45px;
+  }
+  
+  nav.scrolled .logo-queen {
+    height: 28px !important;
+  }
+  
+  nav.scrolled .menu-links a {
+    font-size: 0.7rem !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -20,7 +103,7 @@ body {
     <div class="menu-links">
       <a href="../index.html">Início</a>
       <a href="../biografia/index.html">Biografia</a>
-      <a href="index.html">Músicas</a>
+      <a href="index.html" class="active">Músicas</a>
       <a href="../Albuns/index.html">Álbuns</a>
       <a href="../redessociais/index.html">Redes Sociais</a>
     </div>
@@ -74,6 +157,18 @@ body {
   <footer>
     <p>© Site Queen criado por Gonçalo Silva</p>
   </footer>
+
+  <script>
+    // Efeito de encolher a navbar ao fazer scroll
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 </html>
