@@ -8,7 +8,11 @@
 <link rel="stylesheet" href="../style.css">
 <style>
 body {
-  background-image: url('../img/thework.jpg');
+  background-image: url('../img/thework.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
 }
 
 /* Garantir navbar fixa em mobile com transição suave */
@@ -22,7 +26,7 @@ nav {
   transition: all 0.3s ease-in-out;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
 }
 
 /* Container interno para centralizar conteúdo */
@@ -57,6 +61,7 @@ nav.scrolled .logo-queen {
   
   body {
     padding-top: 60px !important;
+    background-attachment: scroll !important;
   }
   
   nav.scrolled {
